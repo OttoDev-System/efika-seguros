@@ -15,10 +15,12 @@ interface AuthState {
   isAuthenticated: boolean;
   login: (email: string, password: string) => boolean;
   logout: () => void;
+  listUsers: () => User[];
+  addUser: (newUser: Omit<User, 'id'>) => void;
 }
 
 // Usuários mockados conforme PRD
-const MOCK_USERS = [
+let MOCK_USERS = [
   {
     id: '1',
     nome: 'Administrador Efika',
@@ -65,6 +67,18 @@ export const useAuth = create<AuthState>()(
       },
       logout: () => {
         set({ user: null, isAuthenticated: false });
+      },
+      listUsers: () => {
+        return MOCK_USERS.map(({ password: _, ...user }) => user) as User[];
+      },
+      addUser: (newUser: Omit<User, 'id'>) => {
+        const newId = `user_${Date.now()}`;
+        const userWithPassword = { 
+          ...newUser, 
+          id: newId, 
+          password: 'temp123' // senha provisória padrão
+        };
+        MOCK_USERS.push(userWithPassword);
       }
     }),
     {

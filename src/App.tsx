@@ -23,6 +23,7 @@ import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
 import DashboardLayout from "./components/DashboardLayout";
 import AdminDashboard from "./pages/admin/Dashboard";
+import AdminEquipe from "./pages/admin/Equipe";
 import CorretorPipeline from "./pages/corretor/Pipeline";
 import SuporteTickets from "./pages/suporte/Tickets";
 
@@ -83,6 +84,7 @@ const App = () => {
             {/* Rotas Protegidas - Dashboard */}
             <Route path="/admin" element={<DashboardLayout />}>
               <Route path="dashboard" element={<AdminDashboard />} />
+              <Route path="equipe" element={<AdminEquipe />} />
             </Route>
             
             <Route path="/corretor" element={<DashboardLayout />}>
