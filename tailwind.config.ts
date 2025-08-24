@@ -63,12 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				wrlds: {
-					teal: '#9F9EA1',
-					dark: '#3F3F3F',
-					light: '#F6F6F7',
-					accent: '#C8C8C9',
-					muted: '#F1F1F1'
+				efika: {
+					navy: '#1E2B73',
+					silver: '#B8B8B8',
+					white: '#FFFFFF',
+					'navy-light': 'hsl(233 64% 35%)',
+					'silver-light': 'hsl(0 0% 80%)'
 				}
 			},
 			borderRadius: {
@@ -77,7 +77,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'space': ['Space Grotesk', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

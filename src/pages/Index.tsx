@@ -1,37 +1,29 @@
 
-import PageLayout from '@/components/PageLayout';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Projects from '@/components/Projects';
-import WhyWrlds from '@/components/WhyWrlds';
-import BlogPreview from '@/components/BlogPreview';
+import EfikaHero from '@/components/EfikaHero';
+import EfikaDiferenciais from '@/components/EfikaDiferenciais';
+import EfikaPlanosSaude from '@/components/EfikaPlanosSaude';
+import EfikaPessoaJuridica from '@/components/EfikaPessoaJuridica';
+import EfikaPessoaFisica from '@/components/EfikaPessoaFisica';
+import EfikaChatbot from '@/components/EfikaChatbot';
 import SEO from '@/components/SEO';
-import { useEffect } from 'react';
 
 const Index = () => {
-  // Fix any ID conflicts when the page loads
-  useEffect(() => {
-    const contactElements = document.querySelectorAll('[id="contact"]');
-    if (contactElements.length > 1) {
-      // If there are multiple elements with id="contact", rename one
-      contactElements[1].id = 'contact-footer';
-    }
-  }, []);
-
   return (
-    <PageLayout>
+    <>
       <SEO 
-        title="WRLDS - Smart Textile Technology" 
-        description="WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring."
-        imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-        keywords={['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics', 'manufacturing']}
+        title="Efika Corretora - A corretora que cuida do que importa" 
+        description="Proteção completa para você e sua família em todo o Brasil. Planos de saúde, seguros e consórcios com as melhores condições do mercado."
+        keywords={['seguro de vida', 'plano de saúde', 'seguro auto', 'seguro residencial', 'consórcio', 'corretora de seguros']}
       />
-      <Hero />
-      <Features />
-      <WhyWrlds />
-      <Projects />
-      <BlogPreview />
-    </PageLayout>
+      <main className="min-h-screen">
+        <EfikaHero />
+        <EfikaDiferenciais />
+        <EfikaPlanosSaude />
+        <EfikaPessoaJuridica />
+        <EfikaPessoaFisica />
+        <EfikaChatbot />
+      </main>
+    </>
   );
 };
 

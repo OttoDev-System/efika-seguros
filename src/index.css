@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +7,44 @@
 
 @layer base {
   :root {
+    /* Efika Corretora Colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --foreground: 233 64% 28%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 233 64% 28%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 233 64% 28%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 233 64% 28%; /* #1E2B73 - Azul Navy */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 0 0% 72%; /* #B8B8B8 - Cinza Prata */
+    --secondary-foreground: 233 64% 28%;
 
     --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 0 0% 72%; /* #B8B8B8 - Cinza Prata */
+    --accent-foreground: 233 64% 28%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 50%;
+    --ring: 233 64% 28%;
+
+    /* Efika Brand Colors */
+    --efika-navy: 233 64% 28%; /* #1E2B73 */
+    --efika-silver: 0 0% 72%; /* #B8B8B8 */
+    --efika-white: 0 0% 100%; /* #FFFFFF */
+    
+    /* Gradients & Effects */
+    --gradient-primary: linear-gradient(135deg, hsl(233 64% 28%), hsl(233 64% 35%));
+    --shadow-efika: 0 10px 30px -10px hsl(233 64% 28% / 0.3);
+    --shadow-glow: 0 0 40px hsl(233 64% 28% / 0.2);
 
     --radius: 0.5rem;
   }
@@ -51,7 +62,8 @@
   }
 
   body {
-    @apply bg-white text-foreground font-space;
+    @apply bg-white text-foreground;
+    font-family: 'Inter', sans-serif;
   }
 }
 
