@@ -1,3 +1,4 @@
+// AppSidebar Component - Fixed lucide-react imports
 import { NavLink, useLocation } from "react-router-dom";
 import { 
   BarChart3, 
