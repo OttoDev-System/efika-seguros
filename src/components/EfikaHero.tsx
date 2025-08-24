@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, Shield, Clock, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Clock, Users, CheckCircle, LogIn } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,6 +13,7 @@ const EfikaHero = () => {
     whatsapp: "",
     interesse: ""
   });
+  const navigate = useNavigate();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,6 +63,18 @@ const EfikaHero = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.1),transparent)] bg-[length:100px_100px]" />
+      </div>
+
+      {/* Botão de Login - Posicionado no canto superior direito */}
+      <div className="absolute top-6 right-6 z-20">
+        <Button
+          variant="outline"
+          className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm"
+          onClick={() => navigate('/login')}
+        >
+          <LogIn className="w-4 h-4 mr-2" />
+          Área do Cliente
+        </Button>
       </div>
 
       <div className="relative z-10 min-h-[80vh] flex items-center">

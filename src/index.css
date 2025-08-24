@@ -46,6 +46,16 @@
     --shadow-efika: 0 10px 30px -10px hsl(233 64% 28% / 0.3);
     --shadow-glow: 0 0 40px hsl(233 64% 28% / 0.2);
 
+    /* Sidebar Colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 233 64% 28%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 233 64% 28%;
+
     --radius: 0.5rem;
   }
 }
